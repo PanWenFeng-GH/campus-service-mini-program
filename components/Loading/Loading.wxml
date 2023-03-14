@@ -1,0 +1,4 @@
+<!--compnents/Loading/Loading.wxml-->
+<view class="container">
+  <van-loading type="spinner"></van-loading>
+</view>

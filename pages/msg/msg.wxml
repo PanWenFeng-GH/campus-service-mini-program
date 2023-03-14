@@ -1,0 +1,30 @@
+<!--pages/msg/msg.wxml-->
+<!-- 热门资讯 -->
+<block wx:if="{{pageLoading}}">
+  <loading></loading>
+</block>
+<block wx:else>
+  <swiper style="height: 260rpx;" autoplay circular>
+    <swiper-item wx:for="{{banner}}" wx:key="advertisement_id">
+      <block>
+        <van-image fit="cover" width="100%" height="260rpx" src="{{item.file_path}}">
+        </van-image>
+      </block>
+    </swiper-item>
+  </swiper>
+
+  <view class="mt-lg card shadow">
+    <view wx:if="{{list.length}}">
+      <block wx:for="{{list}}" wx:key="article_id">
+        <msg-item item="{{item}}" data-item="{{item}}" bindtap="routeMsgDetail"></msg-item>
+      </block>
+    </view>
+    <view wx:else>
+      <van-empty wx:if="{{!loading}}">暂无资讯</van-empty>
+    </view>
+  </view>
+  <view class="text-center mt-lg">
+    <van-loading size="24rpx" wx:if="{{loading}}">loading</van-loading>
+    <text class="text-gray-9" wx:if="{{finished && list.length}}">没有更多了</text>
+  </view>
+</block>

@@ -1,0 +1,25 @@
+<!--pages/my-activity/my-activity.wxml-->
+<!--pages/orders/orders.wxml-->
+<van-tabs active="{{ active }}" bind:change="onChange" tab-active-class="text-red" line-height="2">
+  <van-tab title="全部"></van-tab>
+  <van-tab title="待参加"></van-tab>
+  <van-tab title="已结束"></van-tab>
+</van-tabs>
+
+<view class="list">
+  <view wx:if="{{list.length}}">
+    <block wx:for="{{list}}" wx:key="activity_id">
+      <view class="item">
+        <activity-item bindtap="routeActivityDetail" data-item="{{item}}" item="{{item}}"></activity-item>
+      </view>
+    </block>
+
+  </view>
+  <view wx:else>
+    <van-empty wx:if="{{!loading}}">暂无活动</van-empty>
+  </view>
+  <view class="text-center mt-lg">
+    <van-loading size="24rpx" wx:if="{{loading}}">loading</van-loading>
+    <text class="text-gray-9" wx:if="{{finished && list.length}}">没有更多了</text>
+  </view>
+</view>

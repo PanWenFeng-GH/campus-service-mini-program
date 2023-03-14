@@ -1,0 +1,20 @@
+<!--pages/index/components/activity-item/activity-item.wxml-->
+<view class="py-lg border-b border-gray border-solid border flex container-of-no-bottom">
+  <van-image fit="cover" width="210rpx" height="150rpx" src="{{item.logo.file_path}}"
+    style="margin-right: 20rpx;"></van-image>
+  <view class="flex flex-col justify-between" style="width: 410rpx;">
+    <view class="truncate text-lg text-gray-6">{{item.activiey_name}}</view>
+    <view class="flex items-center justify-between">
+      <view class="text-danger">
+        <text>￥</text>{{item.price}}
+      </view>
+      <view class="bg-red text-white px-4 py-1 rounded-sm">
+        报名
+      </view>
+    </view>
+    <view class="flex items-center justify-between text-sm text-gray-9">
+      <view>{{item.create_time}}</view>
+      <!-- <view>{{item.applicants_num}}已报名</view> -->
+    </view>
+  </view>
+</view>

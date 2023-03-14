@@ -1,0 +1,16 @@
+<!--pages/msg-detail/msg-detail.wxml-->
+<block wx:if="{{pageLoading}}">
+  <loading></loading>
+</block>
+<block wx:else>
+  <view class="title text-gray-6">
+    {{detail.article_title}}
+  </view>
+  <view class="read-num text-sm text-gray-9 mt-lg">
+    阅读量：{{detail.show_views}}
+  </view>
+  <van-divider></van-divider>
+  <view class="content text-gray-6">
+    <mp-html content="{{detail.article_content}}"></mp-html>
+  </view>
+</block>

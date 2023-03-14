@@ -1,0 +1,76 @@
+<!--index.wxml-->
+
+<block wx:if="{{pageLoading}}">
+  <loading></loading>
+</block>
+<block wx:else>
+  <view class="absolute bg-radius"></view>
+  <!-- 轮播图 -->
+  <swiper class="top-swiper" autoplay circular>
+    <swiper-item wx:for="{{banner}}"  wx:key="id" data-id="{{item.id}}">
+      <block>
+        <van-image fit="cover" width="100%" height="100%" src="{{item.img}}">
+        </van-image>
+      </block>
+    </swiper-item>
+  </swiper>
+  <!-- 滚动信息 -->
+  <view class="flex items-center bg-white news">
+    <van-image width="38rpx" height="42rpx" fit="cover" src="/images/lingdang.gif"></van-image>
+    <swiper class="bottom-swiper flex-grow" vertical circular autoplay>
+      <swiper-item wx:for="{{notice}}" wx:key="notice_id" data-id="{{item.id}}" bindtap="onDetail">
+        <block>
+          <view class="truncate news-text ml-4 mr-4" data-item="{{item}}" bindtap="onShowNotice">{{item.name}}</view>
+        </block>
+      </swiper-item>
+    </swiper>
+    <van-icon name="arrow" />
+  </view>
+  <!-- 功能区 -->
+  <view class="mt-1 card shadow">
+    <view style="gap: 20rpx 0rpx;" class="grid grid-cols-4">
+      <view data-item="{{item}}" bindtap="routeDetail" wx:for="{{indexInfo.dataList}}" wx:key="id">
+        <view class="flex flex-col items-center">
+          <van-image fit="cover" round width="38px" height="38px" src="{{item.url}}"></van-image>
+          <view class="entry-text">
+            {{item.title}}
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <!--广告2
+  <swiper class="top-swiper" autoplay circular>
+    <swiper-item>
+      <block>
+        <van-image fit="cover" width="100%" height="340rpx" src="{{banner[1].img}}">
+        </van-image>
+      </block>
+    </swiper-item>
+  </swiper>-->
+  <!-- 学校公告 -->
+  <view class="mt-1 card shadow">
+    <view class="flex justify-between items-center">
+      <view class="text-md">学校公告</view>
+      <view class="text-sm" bindtap="schoolDetail">查看全部</view>
+    </view>
+    <view wx:for="{{schoolNotice}}" wx:key="id"  bindtap="onDetail" class="py-lg border-b border-gray border-solid border flex-col flex container-of-no-bottom" data-id="{{item.id}}">
+      <view>{{item.name}}</view>
+      <view class="text-sm text-gray-6 mt-1">{{item.releaseTime}}</view>
+    </view>
+  </view>
+  <!-- 好物推荐 -->
+  <view class="mt-1 card shadow">
+    <view class="flex justify-between items-center">
+      <view class="text-md">好物推荐</view>
+      <view class="text-sm" bindtap="goods">查看全部</view>
+    </view>
+    <view class="a-section a-new">
+      <view class="item" wx:for="{{goods}}" data-item="{{item}}" wx:key="id" bindtap="goodsDetail">
+        <image class="img" src="{{item.img}}"></image>
+        <text class="name">{{item.name}}</text>
+        <text class="price">￥{{item.price}}</text>
+      </view>
+    </view>
+  </view>
+</block>

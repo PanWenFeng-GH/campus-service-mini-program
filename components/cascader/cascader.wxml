@@ -1,0 +1,5 @@
+<picker range-key="label" mode="multiSelector" value="{{value}}" range="{{list}}"
+  bindchange="onConfirmChangguan" bindcolumnchange="bindcolumnchange">
+  <van-cell title="场馆场地" is-link value="{{origin[value[0]].label}} / {{origin[value[0]].children[value[1]].label}}" />
+  {{aaa.length}}
+</picker>

@@ -1,0 +1,9 @@
+<!--pages/jobAdd/jobAdd.wxml-->
+
+<van-cell-group>
+  <van-field bind:change="onChange" value="{{ name }}" clearable placeholder="请输入标题" border="{{ true }}" />
+  <textarea oninput ="onBlur" placeholder="请输入内容" name="content" class="text-a" placeholder-style="color:#C8C9CC;" />
+</van-cell-group>
+<view style="width: 100%;text-align: center;">
+  <van-button type="info" bindtap="save">提交</van-button>
+</view>

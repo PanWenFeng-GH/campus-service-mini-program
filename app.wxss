@@ -1,0 +1,11 @@
+/**app.wxss**/
+@import './styles/index.wxss';
+
+/* 覆盖vant样式 */
+page {
+  --tag-danger-color: var(--red);
+  --button-danger-color: var(--white);
+  --button-danger-background-color: var(--red);
+  --button-warning-background-color: var(--yellow);
+  --button-danger-border-color: var(--red);
+}

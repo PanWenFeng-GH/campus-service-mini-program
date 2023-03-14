@@ -1,0 +1,4 @@
+/* sizing */
+.w-full {
+  width: 100%;
+}

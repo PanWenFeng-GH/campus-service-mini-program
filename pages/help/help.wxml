@@ -1,0 +1,8 @@
+<!--pages/help/help.wxml-->
+<block wx:for="{{list}}" wx:key="help_id">
+  <view>
+    {{index + 1}}. {{item.title}}
+  </view>
+  <view class="text-sm text-gray-6 mt-1">{{item.content}}</view>
+  <van-divider></van-divider>
+</block>

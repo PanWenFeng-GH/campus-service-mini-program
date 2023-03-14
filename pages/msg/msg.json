@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "msg-item": "/components/msg-item/msg-item"
+  },
+  "navigationBarTitleText": "资讯"
+}

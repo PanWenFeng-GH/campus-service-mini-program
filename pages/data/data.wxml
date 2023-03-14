@@ -1,0 +1,24 @@
+<!--pages/data/data.wxml-->
+<block>
+  <view class="mt-lg card shadow">
+    <view wx:if="{{list.length}}">
+      <block wx:for="{{list}}" wx:key="id" >
+        <view data-id="{{item.id}}" bindtap="onDetail" class="py-lg border-b border-gray border-solid border flex-col flex container-of-no-bottom"  >
+          <view class="ellipsis-2 text-lg text-gray-6">
+            {{item.name}}
+          </view>
+          <view class="flex items-center justify-between text-sm text-gray-9 mt-3">
+            <view>{{item.createTime}}</view>
+          </view>
+        </view>
+      </block>
+    </view>
+    <view wx:else>
+      <van-empty wx:if="{{!loading}}">暂无数据</van-empty>
+    </view>
+  </view>
+  <view class="text-center mt-lg">
+    <van-loading size="24rpx" wx:if="{{loading}}">loading</van-loading>
+    <text class="text-gray-9" wx:if="{{finished && list.length}}">没有更多了</text>
+  </view>
+</block>

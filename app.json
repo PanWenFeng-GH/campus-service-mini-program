@@ -1,0 +1,77 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/me/me",
+    "pages/msg/msg",
+    "pages/login/login",
+    "pages/help/help",
+    "pages/bbs/index",
+    "pages/job/job",
+    "pages/jobDetail/jobDetail",
+    "pages/data/data",
+    "pages/goods/goods",
+    "pages/goodsDetail/goodsDetail",
+    "pages/bbsDetail/bbsDetail",
+    "pages/editor/editor",
+    "pages/jobAdd/jobAdd",
+    "pages/feedbackAdd/feedbackAdd",
+    "pages/bbsMy/index",
+    "pages/jobMy/jobMy",
+    "pages/dataDetail/dataDetail",
+    "pages/agreement/agreement"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#2D94FF",
+    "navigationBarTitleText": "白马校园",
+    "navigationBarTextStyle": "white",
+    "backgroundColor": "#fbfbfb"
+  },
+  "tabBar": {
+    "selectedColor": "#2D94FF",
+    "color": "#333333",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "/images/tabbar/home.png",
+        "selectedIconPath": "/images/tabbar/home-selected.png",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/bbs/index",
+        "iconPath": "/images/tabbar/msg.png",
+        "selectedIconPath": "/images/tabbar/msg-selected.png",
+        "text": "论坛"
+      },
+      {
+        "pagePath": "pages/me/me",
+        "iconPath": "/images/tabbar/me.png",
+        "selectedIconPath": "/images/tabbar/me-selected.png",
+        "text": "我的"
+      }
+    ]
+  },
+  "usingComponents": {
+    "van-image": "@vant/weapp/image/index",
+    "van-tag": "@vant/weapp/tag/index",
+    "van-divider": "@vant/weapp/divider/index",
+    "van-button": "@vant/weapp/button/index",
+    "van-cell": "@vant/weapp/cell/index",
+    "van-empty": "@vant/weapp/empty/index",
+    "van-loading": "@vant/weapp/loading/index",
+    "van-tab": "@vant/weapp/tab/index",
+    "van-tabs": "@vant/weapp/tabs/index",
+    "loading": "/components/Loading/Loading",
+    "van-icon": "@vant/weapp/icon/index",
+    "van-field": "@vant/weapp/field/index",
+    "van-stepper": "@vant/weapp/stepper/index",
+    "van-popup": "@vant/weapp/popup/index",
+    "van-toast": "@vant/weapp/toast/index",
+    "van-checkbox": "@vant/weapp/checkbox/index",
+    "van-checkbox-group": "@vant/weapp/checkbox-group/index",
+    "van-overlay": "@vant/weapp/overlay/index",
+    "mp-html": "mp-html",
+    "result": "/components/Result/Result"
+  },
+  "sitemapLocation": "sitemap.json"
+}

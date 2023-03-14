@@ -1,0 +1,10 @@
+/* pages/jobAdd/jobAdd.wxss */
+.text-a{
+  background: white;width: 100%;padding:0 10px;height: 260px;
+}
+.van-uploader__upload{
+  display:none;
+}
+.van-uploader__preview{
+  display:inline-block;
+}

@@ -1,0 +1,13 @@
+<!--components/Result/Result.wxml-->
+<view class="container">
+  <van-image width="176rpx" height="176rpx" src="/images/success-icon.png"></van-image>
+  <view class="title">
+    {{title}}
+  </view>
+  <view class="desc">
+    {{desc}}
+  </view>
+  <view class="extra">
+    <slot></slot>
+  </view>
+</view>

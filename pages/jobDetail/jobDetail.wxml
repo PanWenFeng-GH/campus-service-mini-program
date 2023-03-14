@@ -1,0 +1,14 @@
+<!--pages/jobDetail/jobDetail.wxml-->
+<block>
+  <view style="text-align: center;font-size: 18px;">
+    {{detail.name}}
+  </view>
+  <view style="text-align: right;" class="text-sm text-gray-9 mt-3">
+    发布时间：{{detail.createTime}}
+  </view>
+  <van-divider></van-divider>
+  <text class="text-md text-gray-6 mt-1">{{detail.content}}</text>
+  <view wx:if="{{imgeslist.length}}">
+    <van-image width="100%" height="200" wx:for="{{imgeslist}}" wx:key="id" src="{{item}}" />
+  </view>
+</block>

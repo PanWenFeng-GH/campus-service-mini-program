@@ -1,0 +1,36 @@
+/* pages/me/me.wxss */
+page {
+  background-color: var(--white);
+}
+
+.header {
+  padding: 88rpx 120rpx;
+  height: 340rpx;
+  box-sizing: border-box;
+}
+
+.header-bottom {
+  left: 30rpx;
+  right: 30rpx;
+  position: absolute;
+  bottom: 0;
+  transform: translateY(50%);
+  box-shadow: 0rpx 3rpx 27rpx 0rpx rgba(0, 0, 0, 0.07);
+  border-radius: 20rpx;
+  height: 150rpx;
+  position: absolute;
+  background-color: #fff;
+  padding: 25rpx 0;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-around;
+}
+
+.contact-button {
+  padding: 0;
+}
+
+.contact-button::after {
+  border: none;
+  outline: none;
+}

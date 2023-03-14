@@ -1,0 +1,42 @@
+page {
+  --gray: #ededed;
+  --white: #fff;
+  --blue: #2d75ed;
+  --red: #f8505c;
+  --green: #29d40d;
+  --yellow: #f4a203;
+  --gray-3: #333333;
+  --gray-6: #666666;
+  --gray-9: #999999;
+  --light-blue: #f1f7fd;
+  --light-red: #fdf1f1;
+  --light-yellow: #fef5e5;
+  --light-gray: #ececec;
+
+
+  --primary: var(--blue);
+  --danger: var(--red);
+  --warning: var(--yellow);
+  --success: var(--green);
+
+  --text-main: #333333;
+  --text-gray: var(--gray-9);
+
+  --text-lg: 34rpx;
+  --text-md: 28rpx;
+  --text-sm: 24rpx;
+  --text-30: 30rpx;
+
+
+  font-family: SourceHanSansCN-Medium;
+  background-color: #fbfbfb;
+  color: var(--text-main);
+  font-size: var(--text-md);
+  padding-bottom: 50rpx !important;
+  box-sizing: border-box;
+
+}
+
+:root {
+  border-width: 0;
+}

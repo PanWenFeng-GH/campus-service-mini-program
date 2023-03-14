@@ -1,0 +1,35 @@
+/* background */
+.bg-white {
+  background-color: var(--white);
+}
+
+.bg-light-blue {
+  background-color: var(--light-blue);
+}
+
+.bg-light-yellow {
+  background-color: var(--light-yellow);
+}
+
+.bg-light-red {
+  background-color: var(--light-red);
+}
+
+.bg-blue {
+  background-color: var(--blue) !important;
+}
+
+.bg-yellow {
+  background-color: var(--yellow);
+}
+
+.bg-red {
+  background-color: var(--red);
+}
+
+.bg-gray-9{
+  background-color: var(--gray-9);
+}
+.bg-gray-6{
+  background-color: var(--gray-6);
+}

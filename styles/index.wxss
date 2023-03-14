@@ -1,0 +1,12 @@
+@import './vars.wxss';
+
+@import './flex.wxss';
+@import './position.wxss';
+@import './spacing.wxss';
+@import './border.wxss';
+@import './background.wxss';
+@import './text.wxss';
+@import './sizing.wxss';
+@import './shadow.wxss';
+
+@import './advance.wxss';

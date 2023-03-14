@@ -1,0 +1,48 @@
+<!--pages/bbs/index.wxml-->
+<!-- 热门资讯 
+<block wx:if="{{pageLoading}}">
+  <loading></loading>
+</block>-->
+<block>
+  <!-- <swiper style="height: 260rpx;" autoplay circular>
+    <swiper-item wx:for="{{banner}}" wx:key="advertisement_id">
+      <block>
+        <van-image fit="cover" width="100%" height="260rpx" src="{{item.file_path}}"></van-image>
+      </block>
+    </swiper-item>
+  </swiper>-->
+  <view style="position: fixed;bottom: 30px;right: 30px;">
+    <van-button icon="plus" round type="primary" color="#2D94FF" bindtap="editor" />
+  </view>
+  <van-tabs active="{{ type }}" bind:change="onClickTab">
+    <van-tab title="全部"></van-tab>
+    <van-tab title="吐槽爆料"></van-tab>
+    <van-tab title="海底捞人"></van-tab>
+    <van-tab title="脱单交友"></van-tab>
+    <van-tab title="表白示爱"></van-tab>
+    <van-tab title="失物招领"></van-tab>
+    <van-tab title="二手交易"></van-tab>
+  </van-tabs>
+  <view class="mt-lg card">
+    <view wx:if="{{list.length}}">
+      <block wx:for="{{list}}" wx:key="id">
+        <view class="py-lg border-b border-gray border-solid border flex-col flex container-of-no-bottom"
+        bindtap="goDetail" data-id="{{item.id}}">
+          <view class="ellipsis-2 text-lg text-gray-6">
+            {{item.name}}
+          </view>
+          <view class="flex items-center justify-between text-sm text-gray-9 mt-3">
+            <view>{{item.createTime}}</view>
+          </view>
+        </view>
+      </block>
+    </view>
+    <view wx:else>
+      <van-empty wx:if="{{!loading}}">暂无数据</van-empty>
+    </view>
+  </view>
+  <view class="text-center mt-lg">
+    <van-loading size="24rpx" wx:if="{{loading}}">loading</van-loading>
+    <text class="text-gray-9" wx:if="{{finished && list.length}}">没有更多了</text>
+  </view>
+</block>

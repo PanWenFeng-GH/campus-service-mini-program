@@ -1,0 +1,45 @@
+/* pages/goodsDetail/goodsDetail.wxss */
+/* pages/venue-detail/venue-detail.wxss */
+page {
+  padding: 30rpx;
+  box-sizing: border-box;
+  background-color: #fff;
+}
+
+.swiper {
+  height: 360rpx;
+  overflow: hidden;
+  border-radius: 10rpx;
+}
+
+.swiper-book-time {
+  height: 260rpx;
+}
+
+.swiper-book-time .wx-swiper-dot {
+  width: 26px;
+  height: 6px;
+  border-radius: 0;
+  background-color: var(--light-red);
+}
+
+.swiper-book-time .wx-swiper-dot.wx-swiper-dot-active {
+  background-color: var(--red);
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  
+}
+.block{
+  width: 650rpx;
+  height: 70vh;
+  border-radius: 20rpx;
+  background-color: #fff;
+  padding: 30rpx;
+  box-sizing: border-box;
+}

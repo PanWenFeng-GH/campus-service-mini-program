@@ -1,0 +1,106 @@
+<!--pages/me/me.wxml-->
+<view class="relative header">
+  <image src="/images/head_bg.png" style="width: 100%;height: 340rpx;position: absolute;z-index: -1;left: 0;top: 0;">
+  </image>
+  <view class="flex items-center">
+    <block wx:if="{{userInfo}}">
+      <van-image image-class="bg-white" width="120rpx" height="120rpx" src="{{userInfo.wxHeadimgurl}}" round>
+      </van-image>
+      <view style="margin-left: 33rpx;" class="text-white text-lg flex-grow ">
+        <view class="flex items-center justify-between">
+          <view>
+            {{userInfo.nickname}}
+          </view>
+          <!--<navigator url="/pages/qr-code/qr-code">
+            <van-icon name="qr" />
+            <van-icon name="arrow" />
+          </navigator>-->
+        </view>
+        <view class="text-sm mt-2 flex items-center" wx:if="{{userInfo.card}}">
+          <van-image src="{{userInfo.card.file_path}}" width="15" height="18"></van-image>
+          <text class="ml-1">{{userInfo.card_start_time}}-{{userInfo.card_expire_time}}</text>
+        </view>
+      </view>
+    </block>
+    <block wx:else>
+      <van-button size="small" plain type="danger" bindtap="getUserProfile">登录</van-button>
+    </block>
+  </view>
+  <!--
+  <view class="header-bottom">
+    <navigator class="flex flex-col items-center" hover-class="none" url="/pages/orders/orders?tab=0">
+      <van-image width="50rpx" height="50rpx" src="/images/mine-icon/quanbu.png"></van-image>
+      <view class="mt-1">全部预约</view>
+    </navigator>
+    <navigator class="flex flex-col items-center" hover-class="none" url="/pages/orders/orders?tab=1">
+      <van-image width="50rpx" height="50rpx" src="/images/mine-icon/daishiyong.png"></van-image>
+      <view class="mt-1">待使用</view>
+    </navigator>
+    <navigator class="flex flex-col items-center " hover-class="none" url="/pages/orders/orders?tab=2">
+      <van-image width="50rpx" height="50rpx" src="/images/mine-icon/yiwancheng.png"></van-image>
+      <view class="mt-1">已完成</view>
+    </navigator>
+  </view>-->
+</view>
+<view style="margin-top: 10px;" class="px-lg">
+  <van-cell custom-class="flex items-center" is-link url="/pages/jobMy/jobMy">
+    <view class="ml-2 text-md" style="margin-top: -10rpx;" slot="title">
+      我的兼职信息
+    </view>
+    <van-image image-class="mr-2" slot="icon" fit="contain" width="45rpx" height="47rpx" src="/images/mine-icon/my-jianzhi.png">
+    </van-image>
+  </van-cell>
+  <van-cell custom-class="flex items-center" is-link url="/pages/bbsMy/index">
+    <view class="ml-2 text-md" style="margin-top: -10rpx;" slot="title">
+      我的论坛帖子
+    </view>
+    <van-image image-class="mr-2" slot="icon" fit="contain" width="45rpx" height="47rpx" src="/images/mine-icon/luntan.png">
+    </van-image>
+  </van-cell>
+  <van-cell custom-class="flex items-center" is-link url="/pages/feedbackAdd/feedbackAdd">
+    <view class="ml-2 text-md" style="margin-top: -10rpx;" slot="title">
+      建议反馈
+    </view>
+    <van-image image-class="mr-2" slot="icon" fit="contain" width="45rpx" height="47rpx" src="/images/mine-icon/bangzhu.png">
+    </van-image>
+  </van-cell>
+  <!--<button class="contact-button" open-type="contact">
+    <van-cell custom-class="flex items-center" is-link>
+      <view class="ml-2 text-md" style="margin-top: -10rpx;" slot="title" style="text-align: left;">
+        联系客服
+      </view>
+      <van-image image-class="mr-2" slot="icon" fit="contain" width="45rpx" height="47rpx" src="/images/mine-icon/kefu.png">
+      </van-image>
+    </van-cell>
+  </button>-->
+  <van-cell custom-class="flex items-center" is-link url="/pages/agreement/agreement?type=1">
+    <view class="ml-2 text-md" style="margin-top: -10rpx;" slot="title" style="text-align: left;">
+      商务合作
+    </view>
+    <van-image image-class="mr-2" slot="icon" fit="contain" width="45rpx" height="47rpx" src="/images/mine-icon/shangwu.png">
+    </van-image>
+  </van-cell>
+  <van-cell custom-class="flex items-center"  is-link url="/pages/agreement/agreement?type=2">
+    <view class="ml-2 text-md" style="margin-top: -10rpx;" slot="title" style="text-align: left;">
+      加入我们
+    </view>
+    <van-image image-class="mr-2" slot="icon" fit="contain" width="52rpx" height="55rpx" src="/images/mine-icon/jiaru.png">
+    </van-image>
+  </van-cell>
+  <van-cell custom-class="flex items-center"  is-link url="/pages/agreement/agreement?type=3">
+    <view class="ml-2 text-md" style="margin-top: -10rpx;" slot="title" style="text-align: left;">
+      关于我们
+    </view>
+    <van-image image-class="mr-2" slot="icon" fit="contain" width="52rpx" height="55rpx" src="/images/mine-icon/guanyu.png">
+    </van-image>
+  </van-cell>
+  <!-- <van-cell border="{{false}}" is-link bindtap="onLogout">
+    <view class="ml-2" slot="title">
+      退出登录
+    </view>
+    <van-image image-class="mr-2" slot="icon" fit="contain" width="45rpx" height="47rpx"
+      src="/images/mine-icon/bangzhu.png">
+    </van-image>
+  </van-cell> -->
+</view>
+<!-- <button open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber">获取手机号</button> -->

@@ -1,0 +1,6 @@
+<!--pages/agreement/agreement.wxml
+<van-image width="100%" height="214rpx" src="/images/agreement-bg.png"></van-image>-->
+
+<view class="mt-lg card">
+  <text>{{detail.content}}</text>
+</view>

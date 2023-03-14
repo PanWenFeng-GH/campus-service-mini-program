@@ -1,0 +1,17 @@
+<!--pages/goods/goods.wxml-->
+<!-- 好物推荐 -->
+<block>
+<view class="mt-1 card">
+    <!--<view class="flex justify-between items-center">
+      <view class="text-md">好物推荐</view>
+      <view class="text-sm" bindtap="routeActivity">查看全部</view>
+    </view>-->
+    <view class="a-section a-new">
+      <view class="item" wx:for="{{goods}}" wx:key="id" data-item="{{item}}" bindtap="goodsDetail">
+          <image class="img" src="{{item.img}}"></image>
+          <text class="name">{{item.name}}</text>
+          <text class="price">￥{{item.price}}</text>
+      </view>
+    </view>
+  </view>
+</block>

@@ -1,0 +1,64 @@
+<!--pages/jobDetail/jobDetail.wxml-->
+<block>
+  <view style="text-align: center;font-size: 18px;">
+    {{detail.name}}
+  </view>
+  <view>
+    <view style="text-align: left;display: inline;position: relative;" class="text-sm text-gray-9 mt-3">
+      <van-image image-class="bg-white" width="30px" height="30px" src="{{detail.wechatUser.wxHeadimgurl}}" round />
+      <view style="display: inline;position: relative;top: -10px;padding-left: 3px;">{{detail.wechatUser.nickname}}</view>
+    </view>
+    <view style="text-align: right;display: inline;float: right;" class="text-sm text-gray-9 mt-3">
+      发布时间：{{detail.createTime}}
+    </view>
+  </view>
+  <van-divider></van-divider>
+  <rich-text nodes="{{detail.content}}" class="text-md text-gray-6 mt-1"></rich-text>
+  <van-divider></van-divider>
+  <!--评论-->
+  <view wx:if="{{messageList.length > 0}}" wx:for="{{messageList}}" wx:key="idx" style="margin: 5px 0">
+    <view>
+      <van-row type="flex">
+        <van-col span="3" offset="1" style="float: left;margin-right: 3px;">
+          <van-image round width="20px" height="20px" src="{{item.wechatUser.wxHeadimgurl}}"></van-image>
+        </van-col>
+        <text class="label-style">{{item.wechatUser.nickname}} | {{item.createTime}}</text>
+      </van-row>
+    </view>
+    <view>
+      <view class="span-style">
+        <text bindtap="jumpPostInfo" data-post="{{item}}">{{item.content}}</text>
+      </view>
+      <view class="label-cell" bindtap="jumpPostInfo" data-post="{{item}}">
+        <text wx:if="{{item.reply != null}}">{{item.reply}}</text>
+      </view>
+      <!--<view wx:if="{{item.reply == null}}">
+        <van-row style="margin-top: -5px;margin-bottom: -5px">
+          <van-col class="label-cell" style="color: #43474e" offset="18" span="5">
+            <p bindtap="showCommentField" data-wxuser="{{item}}">
+              <van-icon name="comment-o" /> 回复
+            </p>
+          </van-col>
+        </van-row>
+      </view>-->
+    </view>
+    <van-divider></van-divider>
+  </view>
+  <!--占用空白位置-->
+  <van-field value="{{ contentValue }}" autosize type="text" fixed placeholder="请输入评论内容" border="{{true}}" clearable="{{true}}" input-class="fobotom" bind:change="contentValue" use-button-slot>
+    <van-button slot="button" size="small" type="primary" bind:click="pushComment">
+      评论
+    </van-button>
+  </van-field>
+  <view>
+    <van-popup show="{{showComment}}" round position="bottom" close-on-click-overlay="true" z-index="99" bind:close="onClose" custom-style=" height: 15%; z-index:100" closeable overlay="{{true}}" custom-class="van-overlay">
+      <view class="fobotom">
+        <van-field value="{{ replyContent }}" autosize type="text" fixed placeholder="{{popupPlaceholder}}" border="{{false}}" clearable="{{true}}" input-class="fobotom" bind:change="contentValue" use-button-slot>
+          <van-button slot="button" size="small" type="primary" bind:click="pushReplyComment">
+            回复
+          </van-button>
+        </van-field>
+      </view>
+    </van-popup>
+  </view>
+</block>

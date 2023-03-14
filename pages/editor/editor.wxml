@@ -1,0 +1,50 @@
+<!--pages/editor/editor.wxml-->
+<view style="margin: 10px 5px;text-align: right;">
+  <van-button type="primary" size="mini" bindtap="onClickRight">发布</van-button>
+</view>
+<van-cell-group>
+  <van-cell  model:title="{{ value }}" is-link bind:click="showPopup" />
+  <van-field
+    value="{{ name }}"
+    placeholder="请输入标题"
+    border="{{ false }}"
+    bind:change="onChange"
+  />
+</van-cell-group>
+
+<scroll-view scroll-x="{{true}}">
+  <view style="height:{{editorHeight}}px;">
+    <editor id="editor" class="ql-container" placeholder="{{placeholder}}" bindstatuschange="onStatusChange" bindready="onEditorReady">
+    </editor>
+  </view>
+</scroll-view>
+
+<view class="toolbar" catchtouchend="format" style="bottom: {{isIOS ? keyboardHeight : 0}}px">
+  <!-- 插入图片  hidden="{{keyboardHeight > 0 ? false : true}}" style="bottom: {{isIOS ? keyboardHeight : 0}}px" -->
+  <i class="iconfont icon-charutupian" catchtouchend="insertImage"></i>
+  <!-- 居中 -->
+  <i class="iconfont icon-juzhongduiqi {{formats.align === 'center' ? 'ql-active' : ''}}" data-name="align" data-value="center"></i>
+  <!-- 分割线 -->
+  <i class="iconfont icon-fengexian" bindtap="insertDivider"></i>
+  <!-- 标题 3 -->
+  <i class="iconfont icon-format-header-3 {{formats.header === 3 ? 'ql-active' : ''}}" data-name="header" data-value="{{3}}"></i>
+  <!-- 加粗 -->
+  <i class="iconfont icon-zitijiacu {{formats.bold ? 'ql-active' : ''}}" data-name="bold"></i>
+  <!-- 字体加下划线 -->
+  <i class="iconfont icon-zitixiahuaxian {{formats.underline ? 'ql-active' : ''}}" data-name="underline"></i>
+  <!-- 有序 -->
+  <i class="iconfont icon-youxupailie {{formats.list === 'ordered' ? 'ql-active' : ''}}" data-name="list" data-value="ordered"></i>
+  <!-- 无序 -->
+  <i class="iconfont icon-wuxupailie {{formats.list === 'bullet' ? 'ql-active' : ''}}" data-name="list" data-value="bullet"></i>
+  <!-- 删除 -->
+  <i class="iconfont icon-shanchu" bindtap="clear"></i>
+  <!-- 撤销 -->
+  <i class="iconfont icon-undo" bindtap="undo"></i>
+  <!-- 取消撤销 -->
+  <i class="iconfont icon-redo" bindtap="redo"></i>
+</view>
+<!-- 信息 -->
+<van-popup custom-style="height:300px" show="{{ show }}" round position="bottom" bind:close="onClose">
+  <van-picker show-toolbar="false" title="选择类型" columns="{{ columns }}" bind:close="onClose"
+    bind:confirm="onConfirm" />
+</van-popup>

@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "论坛",
+  "usingComponents": {
+    "activity-item": "/components/activity-item/activity-item",
+    "msg-item": "/components/msg-item/msg-item"
+  }
+}

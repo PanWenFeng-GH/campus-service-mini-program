@@ -1,0 +1,10 @@
+/* pages/msg-detail/msg-detail.wxss */
+page {
+  padding: 30rpx;
+  box-sizing: border-box;
+}
+
+.title {
+  font-size: 40rpx;
+  font-weight: bold;
+}

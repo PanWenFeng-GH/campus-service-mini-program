@@ -1,0 +1,7 @@
+{
+  "backgroundColorTop": "#da312e",
+  "usingComponents": {
+    "activity-item": "/components/activity-item/activity-item",
+    "msg-item": "/components/msg-item/msg-item"
+  }
+}

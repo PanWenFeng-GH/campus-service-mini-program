@@ -1,0 +1,40 @@
+/* radius */
+.rounded {
+  border-radius: 0.5rem;
+}
+
+.rounded-sm {
+  border-radius: 0.25rem;
+}
+
+.rounded-lg {
+  border-radius: 0.675rem;
+}
+
+.rounded-circle {
+  border-radius: 10000rem;
+}
+
+.border {
+  border-width: 0;
+}
+
+.border-round {
+  border-width: 1px;
+}
+
+.border-t {
+  border-top-width: 1px;
+}
+
+.border-b {
+  border-bottom-width: 1px;
+}
+
+.border-gray {
+  border-color: var(--light-gray);
+}
+
+.border-solid {
+  border-style: solid;
+}

@@ -1,0 +1,1 @@
+export const baseOrigin = 'http://localhost:8080/'

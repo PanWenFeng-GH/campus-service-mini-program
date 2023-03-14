@@ -1,0 +1,13 @@
+<!--compnents/UnAuthorization/UnAuthorization.wxml-->
+<!-- 需要赋值给pageError -->
+<!-- loading -->
+<block wx:if="{{pageLoading}}">
+  <wasai-loading></wasai-loading>
+</block>
+<!-- 500 -->
+<block wx:if="{{pageError.code === 500}}">
+  <van-empty image="error" description="{{pageError.msg}}" />
+</block>
+<block wx:if="{{!pageLoading && !pageError}}">
+  <slot></slot>
+</block>

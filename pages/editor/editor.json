@@ -1,0 +1,9 @@
+{
+  "disableScroll": false,
+  "usingComponents": {
+    "van-nav-bar": "@vant/weapp/nav-bar/index",
+    "van-field": "@vant/weapp/field/index",
+    "van-sticky": "@vant/weapp/sticky/index",
+    "van-picker": "@vant/weapp/picker/index"
+  }
+}

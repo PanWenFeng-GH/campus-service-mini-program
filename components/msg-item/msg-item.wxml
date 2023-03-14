@@ -1,0 +1,27 @@
+<!--pages/index/components/msg-item/msg-item.wxml-->
+<block wx:if="{{item.show_type === 10}}">
+  <view class="py-lg border-b border-gray border-solid border flex container-of-no-bottom">
+    <van-image fit="cover" width="210rpx" height="150rpx" src="{{item.image.file_path}}" style="margin-right: 20rpx;">
+    </van-image>
+    <view class="flex flex-col justify-around" style="width: 410rpx;">
+      <view class="ellipsis-2 text-lg text-gray-6">{{item.article_title}}</view>
+      <view class="flex items-center justify-between text-sm text-gray-9">
+        <view>{{item.view_time}}</view>
+        <view>{{item.show_views}}已阅读</view>
+      </view>
+    </view>
+  </view>
+</block>
+<block wx:else>
+  <view class="py-lg border-b border-gray border-solid border flex-col flex container-of-no-bottom">
+    <view class="ellipsis-2 text-lg text-gray-6">
+      {{item.article_title}}
+    </view>
+    <van-image class="mt-lg" width="100%" fit="widthFix" src="{{item.image.file_path}}">
+    </van-image>
+    <view class="flex items-center justify-between text-sm text-gray-9 mt-3">
+      <view>{{item.view_time}}</view>
+      <view>{{item.show_views}}已阅读</view>
+    </view>
+  </view>
+</block>

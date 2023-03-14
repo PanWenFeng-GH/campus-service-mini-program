@@ -1,0 +1,21 @@
+{
+  "name": "xcx",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://gitee.com/sifon620/booking-venues.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@vant/weapp": "^1.8.5",
+    "miniprogram-api-promise": "^1.0.4",
+    "miniprogram-computed": "^4.0.6",
+    "mp-html": "^2.1.5"
+  }
+}

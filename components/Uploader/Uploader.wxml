@@ -1,0 +1,3 @@
+<!--compnents/Uploader/Uploader.wxml-->
+
+<van-uploader accept="{{accept}}" file-list="{{ fileList }}" bind:after-read="afterRead" bind:delete="onDel" />

@@ -1,0 +1,14 @@
+<!--compnents/Register/Register.wxml-->
+
+<view class="container">
+  <view class="logo">
+    <image class="image" src="/images/logo.jpg"></image>
+  </view>
+  <view class="center">
+    <view class="welcome">欢迎使用</view>
+    <button class="button" type="primary" bindtap="onRegister">登录</button>
+  </view>
+  <view class="copy">
+    <rich-text class="p" nodes="<span>&copy;</span>盏藏工作室"></rich-text>
+  </view>
+</view>

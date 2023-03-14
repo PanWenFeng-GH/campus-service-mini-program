@@ -1,0 +1,14 @@
+.card {
+  padding: 30rpx 26rpx;
+  background-color: #fff;
+  box-sizing: border-box;
+  border-radius: 10rpx;
+}
+
+.d-inline-block {
+  display: inline-block
+}
+
+.container-of-no-bottom:last-child {
+  border: none;
+}

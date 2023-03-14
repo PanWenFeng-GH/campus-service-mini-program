@@ -1,0 +1,11 @@
+<!--pages/jobDetail/jobDetail.wxml-->
+<block>
+  <view style="text-align: center;font-size: 18px;">
+    {{detail.name}}
+  </view>
+  <view style="text-align: right;" class="text-sm text-gray-9 mt-3">
+    发布时间：{{detail.createTime}}
+  </view>
+  <van-divider></van-divider>
+  <rich-text nodes="{{detail.content}}" class="text-md text-gray-6 mt-1"></rich-text>
+</block>

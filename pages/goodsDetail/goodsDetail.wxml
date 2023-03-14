@@ -1,0 +1,32 @@
+<!--pages/goodsDetail/goodsDetail.wxml-->
+<swiper class="swiper" autoplay circular indicator-dots>
+  <swiper-item wx:for="{{detail.imgs}}" wx:key="id">
+    <block>
+      <van-image fit="cover" width="100%" height="360rpx" src="{{item}}">
+      </van-image>
+    </block>
+  </swiper-item>
+</swiper>
+<!-- 信息 -->
+<view class="py-lg border border-b border-gray border-solid">
+  <view class="flex items-center justify-between">
+    <view class="text-lg">{{detail.name}}</view>
+  </view>
+  <view class="mt-2 text-red">
+    <text>￥</text>
+    <text class="text-lg">{{detail.price}}</text>
+  </view>
+  <text class="" space decode>{{detail.venue_hours}}</text>
+</view>
+<!-- 说明 -->
+<view class="py-lg">
+  <view class="text-lg">介绍</view>
+  <view class="mt-1 text-gray-9">
+    <block wx:if="{{detail.content}}">
+      <mp-html content="{{detail.content}}"></mp-html>
+    </block>
+    <block wx:else>
+      <view>暂无</view>
+    </block>
+  </view>
+</view>

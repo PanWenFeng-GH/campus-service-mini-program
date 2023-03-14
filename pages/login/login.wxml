@@ -1,0 +1,18 @@
+<!--pages/login/login.wxml-->
+<view class="text-center">
+  <view class="avatar">
+    <open-data type="userAvatarUrl"></open-data>
+  </view>
+</view>
+<view style="margin-top: 50rpx;">
+  <van-divider></van-divider>
+</view>
+<view style="font-size: 40rpx;">
+  申请获取以下权限
+</view>
+<view class="mt-lg text-gray-6">
+  获得你的公开信息(昵称、头像等)
+</view>
+<view class="mt-lg">
+  <button type="primary"  bindtap="onLogin">授权登录</button>
+</view>

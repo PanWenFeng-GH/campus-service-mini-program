@@ -1,0 +1,30 @@
+/* pages/my-activity/my-activity.wxss */
+.list {
+  margin: 40rpx 30rpx 0;
+}
+
+.footer {
+  height: 90rpx;
+  display: flex;
+  justify-content: space-between;
+}
+
+.todo {
+  width: 345rpx;
+  height: 90rpx;
+  line-height: 90rpx;
+  background-color: #f9352f;
+  color: #fff;
+  border-radius: 0px 0px 0px 10px;
+}
+
+.cancle {
+  width: 345rpx;
+  height: 90rpx;
+  line-height: 90rpx;
+  background-color: #f2f2f2;
+  border-radius: 0px 0px 10px 0px;
+}
+.item{
+  margin-bottom: 30rpx;
+}

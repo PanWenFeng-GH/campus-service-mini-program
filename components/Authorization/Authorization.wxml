@@ -1,0 +1,26 @@
+<!--compnents/Authorization/Authorization.wxml-->
+
+<!-- loading -->
+<block wx:if="{{pageLoading}}">
+  <wasai-loading></wasai-loading>
+</block>
+<!-- 登录失效 300 -->
+<block wx:if="{{errMsg.code === 300}}">
+  <wasai-register bindonLoginSuccess="onLoginSuccess"></wasai-register>
+</block>
+<!-- 500错误 -->
+<!-- 需要赋值给pageError -->
+<block wx:if="{{pageError.code === 500}}">
+  <van-empty image="error" description="{{pageError.msg}}" />
+</block>
+<block wx:if="{{pageError.code === 301}}">
+  <van-empty image="search" description="{{pageError.msg}}">
+    <van-button block size="small" bind:click="linkUpload">
+      立即完善
+    </van-button>
+  </van-empty>
+</block>
+<!-- page -->
+<block wx:if="{{!pageLoading && !errMsg && !pageError}}">
+  <slot></slot>
+</block>
